@@ -1,0 +1,171 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* General Page Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a222c;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title Bar */
+h1 {
+    background: linear-gradient(135deg, #1E88E5, #0D47A1);
+    color: white;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+/* Region Filter */
+.region-filter {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.region-filter select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #E0E0E0;
+    transition: all 0.2s ease-in-out;
+}
+
+.region-filter button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(135deg, #1E88E5, #1565C0);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.region-filter button:hover {
+    background: linear-gradient(135deg, #1565C0, #0D47A1);
+}
+
+
+/* Make KPI & Dashboard Full Width */
+.kpi-container, .dashboard-container {
+    width: 100%;
+    /* max-width: 1600px;  Allows stretch but prevents extreme widths */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;  /* Adds slight padding instead of margins */
+}
+
+
+/* KPI Cards */
+.kpi-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    /* display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.kpi {
+    background: #212e3b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    /* border-left: 6px solid #1E88E5; */
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.kpi:hover {
+    transform: translateY(-5px);
+}
+
+.kpi span {
+    font-weight: bold;
+    font-size: 24px;
+    color: #42A5F5;
+}
+
+/* Dashboard 3-Column Layout */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Left, Middle, Right Column */
+/* Adjust Grid Layout for Full Width */
+.left-column, .middle-column, .right-column {
+    background: #1C1C1C;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #E0E0E0;
+}
+
+/* Left Column: Rankings */
+.left-column ol {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #B0BEC5;
+}
+
+/* Middle Column: Map */
+.middle-column iframe {
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+/* Right Column: Charts */
+.right-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #B0BEC5;
+}
