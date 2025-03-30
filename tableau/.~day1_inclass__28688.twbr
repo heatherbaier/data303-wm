@@ -1,0 +1,2868 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='day1_inclass' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='pH' caption='Select a Metric' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;PH&quot;'>
+        <calculation class='tableau' formula='&quot;PH&quot;' />
+        <aliases>
+          <alias key='&quot;ALL&quot;' value='All' />
+          <alias key='&quot;DO&quot;' value='Dissolved Oxygen' />
+          <alias key='&quot;PH&quot;' value='pH' />
+          <alias key='&quot;SALINITY&quot;' value='Salinity' />
+          <alias key='&quot;TURB_NTU&quot;' value='Turbulence' />
+        </aliases>
+        <members>
+          <member alias='Dissolved Oxygen' value='&quot;DO&quot;' />
+          <member alias='pH' value='&quot;PH&quot;' />
+          <member alias='Salinity' value='&quot;SALINITY&quot;' />
+          <member alias='Turbulence' value='&quot;TURB_NTU&quot;' />
+          <member alias='All' value='&quot;ALL&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' inline='true' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='WaterQualityWaterQualityStation' name='excel-direct.0hsds4s0uzwckq18yv4xa0s50xi5'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/heatherbaier/Documents/data303/tableau/WaterQualityWaterQualityStation.xls' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0hsds4s0uzwckq18yv4xa0s50xi5' name='WaterQualityWaterQualityStation' table='[WaterQualityWaterQualityStation$]' type='table'>
+          <columns gridOrigin='A1:AD65536:no:A1:AD65536:0' header='yes' outcome='2'>
+            <column datatype='string' name='MonitoringStation' ordinal='0' />
+            <column datatype='integer' name='EventId' ordinal='1' />
+            <column datatype='string' name='Cruise' ordinal='2' />
+            <column datatype='string' name='Program' ordinal='3' />
+            <column datatype='string' name='Project' ordinal='4' />
+            <column datatype='string' name='Agency' ordinal='5' />
+            <column datatype='string' name='Source' ordinal='6' />
+            <column datatype='string' name='Station' ordinal='7' />
+            <column datatype='date' name='SampleDate' ordinal='8' />
+            <column datatype='datetime' name='SampleTime' ordinal='9' />
+            <column datatype='real' name='TotalDepth' ordinal='10' />
+            <column datatype='string' name='UpperPycnocline' ordinal='11' />
+            <column datatype='string' name='LowerPycnocline' ordinal='12' />
+            <column datatype='real' name='Depth' ordinal='13' />
+            <column datatype='string' name='Layer' ordinal='14' />
+            <column datatype='string' name='SampleType' ordinal='15' />
+            <column datatype='string' name='SampleReplicateType' ordinal='16' />
+            <column datatype='string' name='Parameter' ordinal='17' />
+            <column datatype='string' name='Qualifier' ordinal='18' />
+            <column datatype='real' name='MeasureValue' ordinal='19' />
+            <column datatype='string' name='Unit' ordinal='20' />
+            <column datatype='string' name='Method' ordinal='21' />
+            <column datatype='string' name='Lab' ordinal='22' />
+            <column datatype='string' name='Problem' ordinal='23' />
+            <column datatype='string' name='PrecisionPC' ordinal='24' />
+            <column datatype='string' name='BiasPC' ordinal='25' />
+            <column datatype='string' name='Details' ordinal='26' />
+            <column datatype='real' name='Latitude' ordinal='27' />
+            <column datatype='real' name='Longitude' ordinal='28' />
+            <column datatype='string' name='TierLevel' ordinal='29' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AD65536:no:A1:AD65536:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MonitoringStation</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[MonitoringStation]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>MonitoringStation</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EventId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EventId]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>EventId</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cruise</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Cruise]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Cruise</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Program</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Program]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Program</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Project</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Project]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Project</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Agency</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Agency]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Agency</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Source</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Source]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Source</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Station</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Station]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Station</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SampleDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[SampleDate]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>SampleDate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SampleTime</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[SampleTime]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>SampleTime</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalDepth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalDepth]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>TotalDepth</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UpperPycnocline</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[UpperPycnocline]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>UpperPycnocline</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LowerPycnocline</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[LowerPycnocline]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>LowerPycnocline</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Depth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Depth]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Depth</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Layer</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Layer]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Layer</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SampleType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SampleType]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>SampleType</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SampleReplicateType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SampleReplicateType]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>SampleReplicateType</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Parameter</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Parameter]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Parameter</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Qualifier</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Qualifier]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Qualifier</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MeasureValue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MeasureValue]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>MeasureValue</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Unit]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Unit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Method</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Method]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Method</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lab</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Lab]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Lab</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Problem</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Problem]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Problem</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PrecisionPC</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PrecisionPC]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>PrecisionPC</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BiasPC</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BiasPC]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>BiasPC</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Details</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Details]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Details</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TierLevel</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TierLevel]</local-name>
+            <parent-name>[WaterQualityWaterQualityStation]</parent-name>
+            <remote-alias>TierLevel</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Agency]' role='dimension' type='nominal' />
+      <column caption='Bias PC' datatype='string' name='[BiasPC]' role='dimension' type='nominal' />
+      <column caption='ParameterFilter' datatype='boolean' name='[Calculation_581386617902002177]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;All&quot; THEN&#10;    FALSE&#10;ELSE&#10;    [Parameter] = [Parameters].[Parameter 1]&#10;END' />
+      </column>
+      <column caption='LastUpdated' datatype='date' name='[Calculation_6030671797888888833]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(TODAY())' />
+      </column>
+      <column caption='Event Id' datatype='integer' name='[EventId]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Lower Pycnocline' datatype='string' name='[LowerPycnocline]' role='dimension' type='nominal' />
+      <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+      <column caption='Monitoring Station' datatype='string' name='[MonitoringStation]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+      <column caption='Precision PC' datatype='string' name='[PrecisionPC]' role='dimension' type='nominal' />
+      <column caption='Sample Date' datatype='date' name='[SampleDate]' role='dimension' type='ordinal' />
+      <column caption='Sample Replicate Type' datatype='string' name='[SampleReplicateType]' role='dimension' type='nominal' />
+      <column caption='Sample Time' datatype='datetime' name='[SampleTime]' role='dimension' type='ordinal' />
+      <column caption='Sample Type' datatype='string' name='[SampleType]' role='dimension' type='nominal' />
+      <column caption='Tier Level' datatype='string' name='[TierLevel]' role='dimension' type='nominal' />
+      <column caption='Total Depth' datatype='real' name='[TotalDepth]' role='measure' type='quantitative' />
+      <column caption='Upper Pycnocline' datatype='string' name='[UpperPycnocline]' role='dimension' type='nominal' />
+      <column caption='WaterQualityWaterQualityStation' datatype='table' name='[__tableau_internal_object_id__].[WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C]' role='measure' type='quantitative' />
+      <column-instance column='[Parameter]' derivation='Attribute' name='[attr:Parameter:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Agency]' derivation='None' name='[none:Agency:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qv/hlnb1jfx68x_r2g75s1fkjlm0000gq/T/tableau-temp/#TableauTemp_03dv32c0qw3jd215pa25x0t8acwd.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>MonitoringStation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MonitoringStation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MonitoringStation</remote-alias>
+              <ordinal>0</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EventId</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EventId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EventId</remote-alias>
+              <ordinal>1</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1965</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cruise</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Cruise]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cruise</remote-alias>
+              <ordinal>2</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Program</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Program]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Program</remote-alias>
+              <ordinal>3</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Project</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Project]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Project</remote-alias>
+              <ordinal>4</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Agency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Agency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Agency</remote-alias>
+              <ordinal>5</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Source</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Source]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Source</remote-alias>
+              <ordinal>6</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Station</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Station]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Station</remote-alias>
+              <ordinal>7</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SampleDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[SampleDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SampleDate</remote-alias>
+              <ordinal>8</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>321</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SampleTime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[SampleTime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SampleTime</remote-alias>
+              <ordinal>9</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>721</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TotalDepth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[TotalDepth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TotalDepth</remote-alias>
+              <ordinal>10</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>197</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>UpperPycnocline</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[UpperPycnocline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>UpperPycnocline</remote-alias>
+              <ordinal>11</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>34</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LowerPycnocline</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LowerPycnocline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LowerPycnocline</remote-alias>
+              <ordinal>12</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Depth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Depth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Depth</remote-alias>
+              <ordinal>13</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>61</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Layer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Layer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Layer</remote-alias>
+              <ordinal>14</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SampleType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SampleType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SampleType</remote-alias>
+              <ordinal>15</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SampleReplicateType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SampleReplicateType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SampleReplicateType</remote-alias>
+              <ordinal>16</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Parameter</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Parameter]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Parameter</remote-alias>
+              <ordinal>17</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Qualifier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Qualifier]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Qualifier</remote-alias>
+              <ordinal>18</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MeasureValue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MeasureValue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MeasureValue</remote-alias>
+              <ordinal>19</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9668</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unit</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Unit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unit</remote-alias>
+              <ordinal>20</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Method]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Method</remote-alias>
+              <ordinal>21</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lab</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Lab]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lab</remote-alias>
+              <ordinal>22</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Problem</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Problem]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Problem</remote-alias>
+              <ordinal>23</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PrecisionPC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PrecisionPC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PrecisionPC</remote-alias>
+              <ordinal>24</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BiasPC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BiasPC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BiasPC</remote-alias>
+              <ordinal>25</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Details</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Details]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Details</remote-alias>
+              <ordinal>26</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>381</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>27</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>99</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>28</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>101</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TierLevel</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TierLevel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TierLevel</remote-alias>
+              <ordinal>29</ordinal>
+              <family>WaterQualityWaterQualityStation</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Agency:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;MDDNR&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;VADEQ&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Parameter:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;KD&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SSC_\%FINE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CHLA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PN&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TURB_NTU&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DON&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SECCHI&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;NO3F&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;TALK&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NH4F&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SSC_FINE&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DOP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SIF&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;PIC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;TP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DIN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PO4F&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;VSS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PH&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;TN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;FCOLI_C&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SIGMA_T&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;NO23F&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;TDN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;NO23W&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;TDP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;PHEO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;TON&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;PIP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TSS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NH4W&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SSC_SAND&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;FSS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SPCOND&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;WTEMP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PC&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;TKNW&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NO2F&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SSC_TOTAL&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DOC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SALINITY&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Parameter:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;KD&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SSC_\%FINE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CHLA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PN&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TURB_NTU&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DON&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SECCHI&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;NO3F&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;TALK&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NH4F&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SSC_FINE&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DOP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SIF&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;PIC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;TP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DIN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PO4F&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;VSS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PH&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;TN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;FCOLI_C&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SIGMA_T&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;NO23F&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;TDN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;NO23W&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;TDP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;PHEO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;TON&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;PIP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TSS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NH4W&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SSC_SAND&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;FSS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SPCOND&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;WTEMP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PC&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;TKNW&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NO2F&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SSC_TOTAL&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DOC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SALINITY&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='pH' caption='Select a Metric' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;PH&quot;'>
+          <calculation class='tableau' formula='&quot;PH&quot;' />
+          <aliases>
+            <alias key='&quot;ALL&quot;' value='All' />
+            <alias key='&quot;DO&quot;' value='Dissolved Oxygen' />
+            <alias key='&quot;PH&quot;' value='pH' />
+            <alias key='&quot;SALINITY&quot;' value='Salinity' />
+            <alias key='&quot;TURB_NTU&quot;' value='Turbulence' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='WaterQualityWaterQualityStation' id='WaterQualityWaterQualityStation_5276965214024EAD859A7C7F6C60AB8C'>
+            <properties context=''>
+              <relation connection='excel-direct.0hsds4s0uzwckq18yv4xa0s50xi5' name='WaterQualityWaterQualityStation' table='[WaterQualityWaterQualityStation$]' type='table'>
+                <columns gridOrigin='A1:AD65536:no:A1:AD65536:0' header='yes' outcome='2'>
+                  <column datatype='string' name='MonitoringStation' ordinal='0' />
+                  <column datatype='integer' name='EventId' ordinal='1' />
+                  <column datatype='string' name='Cruise' ordinal='2' />
+                  <column datatype='string' name='Program' ordinal='3' />
+                  <column datatype='string' name='Project' ordinal='4' />
+                  <column datatype='string' name='Agency' ordinal='5' />
+                  <column datatype='string' name='Source' ordinal='6' />
+                  <column datatype='string' name='Station' ordinal='7' />
+                  <column datatype='date' name='SampleDate' ordinal='8' />
+                  <column datatype='datetime' name='SampleTime' ordinal='9' />
+                  <column datatype='real' name='TotalDepth' ordinal='10' />
+                  <column datatype='string' name='UpperPycnocline' ordinal='11' />
+                  <column datatype='string' name='LowerPycnocline' ordinal='12' />
+                  <column datatype='real' name='Depth' ordinal='13' />
+                  <column datatype='string' name='Layer' ordinal='14' />
+                  <column datatype='string' name='SampleType' ordinal='15' />
+                  <column datatype='string' name='SampleReplicateType' ordinal='16' />
+                  <column datatype='string' name='Parameter' ordinal='17' />
+                  <column datatype='string' name='Qualifier' ordinal='18' />
+                  <column datatype='real' name='MeasureValue' ordinal='19' />
+                  <column datatype='string' name='Unit' ordinal='20' />
+                  <column datatype='string' name='Method' ordinal='21' />
+                  <column datatype='string' name='Lab' ordinal='22' />
+                  <column datatype='string' name='Problem' ordinal='23' />
+                  <column datatype='string' name='PrecisionPC' ordinal='24' />
+                  <column datatype='string' name='BiasPC' ordinal='25' />
+                  <column datatype='string' name='Details' ordinal='26' />
+                  <column datatype='real' name='Latitude' ordinal='27' />
+                  <column datatype='real' name='Longitude' ordinal='28' />
+                  <column datatype='string' name='TierLevel' ordinal='29' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column caption='Monitoring Station' datatype='string' name='[MonitoringStation]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+            <column-instance column='[MeasureValue]' derivation='Avg' name='[avg:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Latitude]' derivation='None' name='[none:Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Longitude]' derivation='None' name='[none:Longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MonitoringStation]' derivation='None' name='[none:MonitoringStation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]'>
+            <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;DO&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]' />
+              <lod column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MonitoringStation:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Latitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Latitude:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Longitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Longitude:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Average Dissolved Oxygen:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Latitude:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{17F83094-8255-4BE8-A6D1-B0742A2943AB}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column caption='Monitoring Station' datatype='string' name='[MonitoringStation]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+            <column-instance column='[MeasureValue]' derivation='Avg' name='[avg:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Latitude]' derivation='None' name='[none:Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Longitude]' derivation='None' name='[none:Longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MonitoringStation]' derivation='None' name='[none:MonitoringStation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]'>
+            <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;DO&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]' />
+              <lod column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MonitoringStation:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Latitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Latitude:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Longitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Longitude:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Monitoring Station:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MonitoringStation:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Average Dissolved Oxygen:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Latitude:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{F5600BBF-352F-4408-9E01-0E8FF4F3578E}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+            <column-instance column='[MeasureValue]' derivation='None' name='[none:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;DO&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;PH&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;SALINITY&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;TURB_NTU&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</cols>
+      </table>
+      <simple-id uuid='{5F868B60-0458-4452-AA3B-DD08B145C2F8}' />
+    </worksheet>
+    <worksheet name='Sheet 13'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+            <column-instance column='[MeasureValue]' derivation='None' name='[none:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;DO&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;PH&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;SALINITY&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;TURB_NTU&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='none' probability='95' scope='per-cell' symmetric='false' value-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' z-order='1' />
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</cols>
+      </table>
+      <simple-id uuid='{28D729B5-068E-4C52-9109-F9E496848DC5}' />
+    </worksheet>
+    <worksheet name='Sheet 14'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+            <column-instance column='[MeasureValue]' derivation='None' name='[none:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;DO&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;PH&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;SALINITY&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;TURB_NTU&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</cols>
+      </table>
+      <simple-id uuid='{A5AC23E4-1E4C-4E3A-B560-ACED23612A95}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+            <column caption='Sample Date' datatype='date' name='[SampleDate]' role='dimension' type='ordinal' />
+            <column-instance column='[MeasureValue]' derivation='None' name='[none:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SampleDate]' derivation='None' name='[none:SampleDate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;DO&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;PH&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;SALINITY&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;TURB_NTU&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:SampleDate:qk]' included-values='in-range'>
+            <min>#2024-01-03#</min>
+            <max>#2024-10-23#</max>
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</column>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:SampleDate:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:MeasureValue:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</cols>
+      </table>
+      <simple-id uuid='{1644EF09-A7B0-4A80-9B43-B406AE4BA2DB}' />
+    </worksheet>
+    <worksheet name='agnecy pie'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>Reporting Agencies</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column datatype='string' name='[Agency]' role='dimension' type='nominal' />
+            <column caption='Event Id' datatype='integer' name='[EventId]' role='dimension' type='ordinal' />
+            <column-instance column='[EventId]' derivation='Count' name='[cnt:EventId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Agency]' derivation='None' name='[none:Agency:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' />
+              <wedge-size column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[cnt:EventId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Agency:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Number of Measurements:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[cnt:EventId:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{ABD7F7BE-8262-4C2F-84F4-28E67FC2EDC8}' />
+    </worksheet>
+    <worksheet name='line plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column datatype='string' name='[Agency]' role='dimension' type='nominal' />
+            <column caption='Event Id' datatype='integer' name='[EventId]' role='dimension' type='ordinal' />
+            <column caption='Sample Date' datatype='date' name='[SampleDate]' role='dimension' type='ordinal' />
+            <column-instance column='[EventId]' derivation='Count' name='[cnt:EventId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SampleDate]' derivation='Month' name='[mn:SampleDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Agency]' derivation='None' name='[none:Agency:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[cnt:EventId:qk]' scope='rows' value='Number of Measurements' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[cnt:EventId:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[mn:SampleDate:ok]</cols>
+      </table>
+      <simple-id uuid='{A7A961EE-8243-4DDC-814A-35D02230758A}' />
+    </worksheet>
+    <worksheet name='program matrix'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>Program Matrix</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column datatype='string' name='[Agency]' role='dimension' type='nominal' />
+            <column caption='Event Id' datatype='integer' name='[EventId]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Program]' role='dimension' type='nominal' />
+            <column-instance column='[EventId]' derivation='Count' name='[cnt:EventId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Agency]' derivation='None' name='[none:Agency:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Program]' derivation='None' name='[none:Program:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' />
+              <text column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[cnt:EventId:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Program:nk]</cols>
+      </table>
+      <simple-id uuid='{D91F8847-0D72-454D-8701-2B55DA2EF3D7}' />
+    </worksheet>
+    <worksheet name='quality map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='pH' caption='Select a Metric' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;PH&quot;'>
+              <calculation class='tableau' formula='&quot;PH&quot;' />
+              <aliases>
+                <alias key='&quot;ALL&quot;' value='All' />
+                <alias key='&quot;DO&quot;' value='Dissolved Oxygen' />
+                <alias key='&quot;PH&quot;' value='pH' />
+                <alias key='&quot;SALINITY&quot;' value='Salinity' />
+                <alias key='&quot;TURB_NTU&quot;' value='Turbulence' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column-instance column='[MeasureValue]' derivation='Avg' name='[avg:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Latitude]' derivation='None' name='[none:Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Longitude]' derivation='None' name='[none:Longitude:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Longitude:qk]' field-type='quantitative' max='-8292269.1868572626' min='-9032347.1819021255' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Latitude:qk]' field-type='quantitative' max='4845369.064599148' min='4411357.2201475315' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]' />
+              <lod column='[Parameters].[Parameter 1]' />
+              <geometry column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Latitude:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{99B1A9FB-D38C-4E87-B444-9D4E741678E7}' />
+    </worksheet>
+    <worksheet name='quality over time'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column caption='Measure Value' datatype='real' name='[MeasureValue]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Parameter]' role='dimension' type='nominal' />
+            <column caption='Sample Date' datatype='date' name='[SampleDate]' role='dimension' type='ordinal' />
+            <column-instance column='[MeasureValue]' derivation='Avg' name='[avg:MeasureValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Parameter]' derivation='None' name='[none:Parameter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SampleDate]' derivation='Month-Trunc' name='[tmn:SampleDate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;DO&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;PH&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;SALINITY&quot;' />
+              <groupfilter function='member' level='[none:Parameter:nk]' member='&quot;TURB_NTU&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]</rows>
+        <cols>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[tmn:SampleDate:qk]</cols>
+      </table>
+      <simple-id uuid='{B59965D2-16C4-4822-BF05-21554344F114}' />
+    </worksheet>
+    <worksheet name='todays date'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column caption='LastUpdated' datatype='date' name='[Calculation_6030671797888888833]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(TODAY())' />
+            </column>
+            <column-instance column='[Calculation_6030671797888888833]' derivation='Day-Trunc' name='[tdy:Calculation_6030671797888888833:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[tdy:Calculation_6030671797888888833:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='Benton Sans Book'>Date Last Updated: </run>
+                <run><![CDATA[<[federated.10f3m2s1v07im71bzwytp0fk2yq2].[tdy:Calculation_6030671797888888833:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8FB36303-E159-428F-984F-CD1ACDF26050}' />
+    </worksheet>
+    <worksheet name='top agency'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>Top Reporting Agency</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column datatype='string' name='[Agency]' role='dimension' type='nominal' />
+            <column-instance column='[Agency]' derivation='None' name='[none:Agency:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]'>
+            <groupfilter count='1' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([Agency])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Agency:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='20' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' />
+              <text column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{99AAEA74-EC43-4BE0-B760-5E6B5C700FD4}' />
+    </worksheet>
+    <worksheet name='top program'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>Top Program</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WaterQualityWaterQualityStation (WaterQualityWaterQualityStation)' name='federated.10f3m2s1v07im71bzwytp0fk2yq2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10f3m2s1v07im71bzwytp0fk2yq2'>
+            <column datatype='string' name='[Program]' role='dimension' type='nominal' />
+            <column-instance column='[Program]' derivation='None' name='[none:Program:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Program:nk]'>
+            <groupfilter count='1' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([Program])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Program:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Program:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='20' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Program:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0FE4E8A8-356F-4AB2-9364-F73A192D9CA2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Agency Monitoring'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='61171' id='15' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='61171' id='13' type-v2='layout-basic' w='98400' x='800' y='1000'>
+              <zone h='20286' id='9' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='20286' id='7' type-v2='layout-basic' w='98400' x='800' y='1000'>
+                  <zone h='4656' id='3' type-v2='text' w='98400' x='800' y='1000'>
+                    <formatted-text>
+                      <run bold='true' fontalignment='1' fontsize='16'>Agency Monitoring</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='15630' id='5' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='98400' x='800' y='5656'>
+                    <zone h='15625' id='6' name='top agency' w='49200' x='800' y='5625'>
+                      <layout-cache fixed-size-h='119' fixed-size-w='60' type-h='fixed' type-w='fixed' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='15625' id='10' name='top program' w='49200' x='50000' y='5625'>
+                      <layout-cache fixed-size-w='60' type-h='fixed' type-w='fixed' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='40885' id='11' param='horz' type-v2='layout-flow' w='98400' x='800' y='21286'>
+                <zone fixed-size='95' h='40885' id='16' is-fixed='true' name='agnecy pie' pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' type-v2='color' w='10300' x='800' y='21286'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='314' h='40885' id='12' is-fixed='true' name='agnecy pie' w='32200' x='11100' y='21286'>
+                  <layout-cache fixed-size-h='203' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='244' h='40885' id='17' is-fixed='true' name='program matrix' w='25200' x='43300' y='21286'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='32303' id='18' name='line plot' show-title='false' w='98400' x='800' y='66697'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='4526' id='19' type-v2='text' w='98400' x='800' y='62171'>
+            <formatted-text>
+              <run bold='true' fontalignment='1'>Measurements Over Time</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='24' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='4656' id='3' type-v2='text' w='98400' x='800' y='1000'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontsize='16'>Agency Monitoring</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='117' h='15625' id='6' is-fixed='true' name='top agency' w='49200' x='800' y='5625'>
+                  <layout-cache fixed-size-h='119' fixed-size-w='60' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='117' h='15625' id='10' is-fixed='true' name='top program' w='49200' x='50000' y='5625'>
+                  <layout-cache fixed-size-w='60' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40885' id='12' is-fixed='true' name='agnecy pie' w='32200' x='11100' y='21286'>
+                  <layout-cache fixed-size-h='203' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='95' h='40885' id='16' name='agnecy pie' pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' type-v2='color' w='10300' x='800' y='21286'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40885' id='17' is-fixed='true' name='program matrix' w='25200' x='43300' y='21286'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4526' id='19' type-v2='text' w='98400' x='800' y='62171'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1'>Measurements Over Time</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='250' h='32303' id='18' is-fixed='true' name='line plot' show-title='false' w='98400' x='800' y='66697'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1A6AE1EA-03A3-465D-B6CA-0AE115CA64E4}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Overview'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='15683' id='3' param='horz' type-v2='layout-flow' w='97538' x='1231' y='1236'>
+            <zone h='15683' id='5' is-centered='0' param='/Users/heatherbaier/Downloads/water_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png' type-v2='bitmap' w='15999' x='1231' y='1236'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='418' h='15683' id='6' is-fixed='true' type-v2='text' w='65539' x='17230' y='1236'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>Chesapeake Bay Water Quality Dashboard</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='96' h='15683' id='7' is-centered='0' is-fixed='true' param='/Users/heatherbaier/Downloads/water_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png' type-v2='bitmap' w='16000' x='82769' y='1236'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='68177' id='8' type-v2='text' w='97538' x='1231' y='16919'>
+            <formatted-text>
+              <run fontalignment='1'>Welcome to the Chesapeake Bay Water Quality Dashboard. This interactive tool is designed to provide a comprehensive overview of our water quality monitoring data, supporting informed decisions and environmental stewardship of one of our nation’s most vital waterways.
+
+This dashboard aggregates water quality data collected from various sources around Chesapeake Bay. It presents key insights into the health of the bay through multiple dimensions—ranging from specific water quality variables to the agencies and sources contributing to the data.
+
+</run>
+              <run bold='true' fontalignment='1'>Water Quality Variables</run>
+              <run fontalignment='1'>
+Explore a wide range of water quality parameters including, but not limited to, pH levels, dissolved oxygen, temperature, turbidity, and nutrient concentrations. These variables are critical in assessing the overall health and ecological status of Chesapeake Bay.
+
+</run>
+              <run bold='true' fontalignment='1'>Agencies</run>
+              <run fontalignment='1'>
+Our data is collected and curated by a network of environmental monitoring agencies dedicated to safeguarding Chesapeake Bay. These agencies work collaboratively to ensure the accuracy and timeliness of the information presented in this dashboard.
+
+</run>
+              <run bold='true' fontalignment='1'>Sources</run>
+              <run fontalignment='1'>
+The information displayed here is sourced directly from the Chesapeake Bay Data Hub. This ensures that all data is obtained from reliable, vetted, and up-to-date repositories that are integral to regional water quality monitoring efforts.
+
+</run>
+              <run bold='true' fontalignment='1'>Authors:</run>
+              <run fontalignment='1'>
+William &amp; Mary DATA 303 Students</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='13668' id='9' name='todays date' show-title='false' w='97538' x='1231' y='85096'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='15' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='14' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='127' h='15682' id='5' is-centered='0' is-fixed='true' param='/Users/heatherbaier/Downloads/water_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png' type-v2='bitmap' w='15999' x='1231' y='1242'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='418' h='15682' id='6' type-v2='text' w='65539' x='17230' y='1242'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>Chesapeake Bay Water Quality Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='127' h='15682' id='7' is-centered='0' is-fixed='true' param='/Users/heatherbaier/Downloads/water_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png' type-v2='bitmap' w='16000' x='82769' y='1242'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='68168' id='8' type-v2='text' w='97538' x='1231' y='16924'>
+                  <formatted-text>
+                    <run fontalignment='1'>Welcome to the Chesapeake Bay Water Quality Dashboard. This interactive tool is designed to provide a comprehensive overview of our water quality monitoring data, supporting informed decisions and environmental stewardship of one of our nation’s most vital waterways.
+
+This dashboard aggregates water quality data collected from various sources around Chesapeake Bay. It presents key insights into the health of the bay through multiple dimensions—ranging from specific water quality variables to the agencies and sources contributing to the data.
+
+</run>
+                    <run bold='true' fontalignment='1'>Water Quality Variables</run>
+                    <run fontalignment='1'>
+Explore a wide range of water quality parameters including, but not limited to, pH levels, dissolved oxygen, temperature, turbidity, and nutrient concentrations. These variables are critical in assessing the overall health and ecological status of Chesapeake Bay.
+
+</run>
+                    <run bold='true' fontalignment='1'>Agencies</run>
+                    <run fontalignment='1'>
+Our data is collected and curated by a network of environmental monitoring agencies dedicated to safeguarding Chesapeake Bay. These agencies work collaboratively to ensure the accuracy and timeliness of the information presented in this dashboard.
+
+</run>
+                    <run bold='true' fontalignment='1'>Sources</run>
+                    <run fontalignment='1'>
+The information displayed here is sourced directly from the Chesapeake Bay Data Hub. This ensures that all data is obtained from reliable, vetted, and up-to-date repositories that are integral to regional water quality monitoring efforts.
+
+</run>
+                    <run bold='true' fontalignment='1'>Authors:</run>
+                    <run fontalignment='1'>
+William &amp; Mary DATA 303 Students</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='109' h='13666' id='9' is-fixed='true' name='todays date' show-title='false' w='97538' x='1231' y='85092'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{86AE2A2C-B6BB-4829-9D61-41A6860E06A7}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='todays date'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF982A49-9787-4CF8-904A-38B23C054C41}' />
+    </window>
+    <window class='worksheet' name='agnecy pie'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{59172C79-671D-45C7-9383-C13109D68C42}' />
+    </window>
+    <window class='worksheet' name='line plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6E0E640F-02A9-49BD-A421-FBAFCAB6FA8D}' />
+    </window>
+    <window class='worksheet' name='program matrix'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{322C64B1-DBE2-40CA-B621-21AB15C00173}' />
+    </window>
+    <window class='worksheet' name='top agency'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Agency:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F1F73EFA-9C2F-4199-880A-1459E55A4F90}' />
+    </window>
+    <window class='worksheet' name='top program'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{652831C0-8213-42D2-AA3F-70671D928350}' />
+    </window>
+    <window class='worksheet' name='quality over time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:Parameter:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{27F01F2E-B036-419E-BBAF-4ED66A7EB1F1}' />
+    </window>
+    <window class='worksheet' name='quality map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C5C663D6-971C-438D-95B0-CFD81901CB5E}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[none:SampleDate:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{820D8F4D-A4B5-47B3-8466-8C789197D39E}' />
+    </window>
+    <window class='dashboard' name='Overview'>
+      <viewpoints>
+        <viewpoint name='todays date' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{E0DF7A79-C688-4138-BA14-B459ED526DEF}' />
+    </window>
+    <window class='dashboard' name='Agency Monitoring'>
+      <viewpoints>
+        <viewpoint name='agnecy pie'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='line plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='program matrix'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='top agency'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='top program'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{D9294F43-8E98-4A59-AE62-155D35AB690B}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ED9CC96F-F006-43EA-8E04-4FD2587D30C7}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.10f3m2s1v07im71bzwytp0fk2yq2].[avg:MeasureValue:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C5494B1A-F7DF-4FB5-8E94-4F0FEB2498FB}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CC865ED4-AD23-4425-84DB-C536E81E1D21}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1283564B-187C-4FCC-A707-189AD60FFD73}' />
+    </window>
+    <window class='worksheet' name='Sheet 14'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BA9D01E4-2429-4142-A85F-CDCD55C1970B}' />
+    </window>
+  </windows>
+</workbook>
